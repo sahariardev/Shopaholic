@@ -1,0 +1,62 @@
+package com.sahariar.Shopaholic.Models;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Address extends BaseEntity implements Serializable{
+	
+	@Id
+	@GeneratedValue (strategy=GenerationType.AUTO)	
+	private Long id;	
+	private String countryName;
+	private String city;
+	private String village;
+	private String postalCode;
+	private String googleMapLocation;
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getCountryName() {
+		return countryName;
+	}
+	public void setCountryName(String countryName) {
+		this.countryName = countryName;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getVillage() {
+		return village;
+	}
+	public void setVillage(String village) {
+		this.village = village;
+	}
+	public String getPostalCode() {
+		return postalCode;
+	}
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
+	}
+	public String getGoogleMapLocation() {
+		return googleMapLocation;
+	}
+	public void setGoogleMapLocation(String googleMapLocation) {
+		this.googleMapLocation = googleMapLocation;
+	}
+	
+	
+
+	  
+
+}
