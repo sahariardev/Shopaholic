@@ -1,11 +1,15 @@
 package com.sahariar.Shopaholic.Models;
 
 import java.io.Serializable;
+import java.util.Set;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
+@Entity
 public class Category extends BaseEntity implements Serializable {
 
 	
@@ -14,6 +18,18 @@ public class Category extends BaseEntity implements Serializable {
 	private long id;
 	private String title;
 	private String description;
+	
+	@ManyToMany(mappedBy="categories")
+	private Set<Product> products;
+	
+	
+	
+	public Set<Product> getProducts() {
+		return products;
+	}
+	public void setProducts(Set<Product> products) {
+		this.products = products;
+	}
 	public long getId() {
 		return id;
 	}

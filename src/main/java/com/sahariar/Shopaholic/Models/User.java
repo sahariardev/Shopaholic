@@ -10,7 +10,7 @@ import javax.persistence.OneToOne;
 
 
 @Entity
-public class Admin extends BaseEntity implements Serializable {
+public class User extends BaseEntity implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
